@@ -1,0 +1,9 @@
+[0m[[0m[0mdebug[0m] [0m[0mFull compilation, no sources in previous analysis.[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll sources are invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all 1 sources: invalidated sources (1) exceeded 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Java source to C:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\target\scala-2.12\classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mAttempting to call com.sun.tools.javac.api.JavacTool@5eb4b4af directly...[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation took 1.936105414 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava analysis took 0.059183761 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mJava compilation + analysis took 2.004768425 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m

@@ -1,0 +1,10 @@
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\src\test\scala\LMDBTest.scala:20:18: imported `Test' is permanently hidden by definition of class Test[0m
+[0m[[0m[33mwarn[0m] [0m[0mimport org.junit.Test[0m
+[0m[[0m[33mwarn[0m] [0m[0m                 ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\src\test\scala\LMDBTest.scala:78:5: A try without a catch or finally is equivalent to putting its body in a block; no exceptions are handled.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    try {[0m
+[0m[[0m[33mwarn[0m] [0m[0m    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\src\test\scala\LMDBTest.scala:93:5: A try without a catch or finally is equivalent to putting its body in a block; no exceptions are handled.[0m
+[0m[[0m[33mwarn[0m] [0m[0m    try {[0m
+[0m[[0m[33mwarn[0m] [0m[0m    ^[0m
+[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
