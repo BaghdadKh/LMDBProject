@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfd05eef-6513-4961-aef5-34e08a5d4ef7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules/lmdbproject.iml" afterPath="$PROJECT_DIR$/.idea/modules/lmdbproject.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$eae7cafae0cf5acf436f$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$eae7cafae0cf5acf436f.cache" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/project/target/config-classes/$eae7cafae0cf5acf436f.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/LMDBMain.scala" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/LMDBMain$.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/scala-2.12/classes/LMDBMain.class" afterPath="" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/lmdbproject$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/lmdbproject$sources/0.1/resolved.xml.properties" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/lmdbproject$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/lmdbproject$sources/0.1/resolved.xml.xml" />
       <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/lmdbproject_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/lmdbproject_2.12/0.1/resolved.xml.properties" />
@@ -81,8 +73,8 @@
       <file leaf-file-name="ZioScenarios.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/ZioScenarios.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -826,8 +818,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/ZioScenarios.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
