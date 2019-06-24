@@ -4,7 +4,8 @@ import java.nio.ByteBuffer.allocateDirect
 import java.nio.charset.StandardCharsets.UTF_8
 
 import org.lmdbjava.DbiFlags.MDB_CREATE
-import org.lmdbjava.Env.create
+import org.lmdbjava.Env
+import org.lmdbjava.Env.{Builder, create}
 import org.lmdbjava.EnvFlags.MDB_NOSUBDIR
 import scalaz.zio._
 import scalaz.zio.console._
@@ -13,7 +14,7 @@ object ZIOReadLMDB extends App {
   //Setting env
   val DB_NAME = "my DB2"
   val file = new File("testZIO.txt")
-  val createEnv = create().setMapSize(10485760).setMaxDbs(1)
+  val createEnv : Builder[ByteBuffer] = create().setMapSize(10485760).setMaxDbs(1)
   val env = createEnv.open(file,MDB_NOSUBDIR)
   val db = env.openDbi(DB_NAME, MDB_CREATE)
   //define key value record

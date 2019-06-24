@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets.UTF_8
 import org.lmdbjava.DbiFlags.MDB_CREATE
 import org.lmdbjava.Env.create
 import org.lmdbjava.EnvFlags.MDB_NOSUBDIR
-import org.lmdbjava.{Env, KeyRange}
+import org.lmdbjava.{CursorIterator, Env, KeyRange}
 import scalaz.zio._
 
 import scala.collection.JavaConversions._
@@ -32,17 +32,17 @@ object ZioScenarios {
       } finally if (txnw != null) txnw.close()
     }
 
-    try {
+//    try {
       val txn = env.txnRead()
-      try {
+//      try {
         val cursor = db.iterate(txn, KeyRange.all[ByteBuffer]())
-        for (kv <- cursor.iterable) {
+        for (kv:CursorIterator.KeyVal[ByteBuffer] <- cursor.iterable) {
           val key = kv.key()
           val value = kv.`val`
           println(UTF_8.decode(key) + " " + UTF_8.decode(value).toString)
         }
-      } finally if (txn != null) txn.close()
-    }
+//      } finally if (txn != null) txn.close()
+//    }
   }
   def factorial(i: BigInt):BigInt= {
     def fact(i: BigInt, accumulator: BigInt): BigInt = {
