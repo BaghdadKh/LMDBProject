@@ -24,11 +24,15 @@ object ModularizeCode extends App {
       env <- myLmdb.createEnv()
       env2 <- myLmdb.openEnv(env, "writeTest2.txt", MDB_NOSUBDIR)
       db <- myLmdb.openDb(env2, "my DB WriteTest2", MDB_CREATE)
-      tx <- myLmdb.createWriteTx(env2)
-      _ <- myLmdb.putOnLmdb(tx, db, myLmdb.createElement("k7"), myLmdb.createElement("V7"))
-      _ <- myLmdb.commitToDb(tx)
-      txn <- myLmdb.createReadTx(env2)
-      _ <- myLmdb.readFromDb(txn,db)
+      txnWrite <- myLmdb.createWriteTx(env2)
+      _ <- myLmdb.putOnLmdb(txnWrite, db, myLmdb.createElement("k"), myLmdb.createElement("V"))
+      _ <- myLmdb.putOnLmdb(txnWrite, db, myLmdb.createElement("k7"), myLmdb.createElement("V7"))
+      _ <- myLmdb.commitToDb(txnWrite)
+      txRead <- myLmdb.createReadTx(env2)
+
+      c <- myLmdb.readFromDb(txRead,db)
+//      flag <- if (c.hasNext)
+//      _ <- myLmdb.commitToDb(txRead)
     } yield (0)
 
 }
@@ -69,19 +73,15 @@ class LMDB() {
 
   def commitToDb(tx: Txn[ByteBuffer]) = {
     IO.succeed(tx.commit())
+
   }
 
-  //trying Read from LMDB
-  /** Error:(75, 57) value withFilter is not a member of Iterable[org.lmdbjava.CursorIterator.KeyVal[java.nio.ByteBuffer]]
-    * for (kv:CursorIterator.KeyVal[ByteBuffer] <- cursor.iterable) { **/
   def readFromDb(txn: Txn[ByteBuffer], db: Dbi[ByteBuffer]) = {
     val cursor: CursorIterator[ByteBuffer] = db.iterate(txn, KeyRange.all[ByteBuffer]())
-    while(cursor.iterable().iterator().hasNext){
+    while(cursor.hasNext){
       val kv = cursor.next()
-      val key = kv.key()
-      val value = kv.`val`()
-      println(UTF_8.decode(key).toString + "   "+ UTF_8.decode(value).toString)
+      println(UTF_8.decode(kv.key()).toString + "   "+ UTF_8.decode(kv.`val`()).toString)
     }
-    IO.succeed("")
+    IO.succeed(cursor)
   }
 }
