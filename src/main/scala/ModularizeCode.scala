@@ -22,12 +22,13 @@ object ModularizeCode extends App {
   override def run(args: List[String]) =
     for {
       env <- myLmdb.createEnv()
-      env2 <- myLmdb.openEnv(env, "writeTest.txt", MDB_NOSUBDIR)
-      db <- myLmdb.openDb(env2, "my DB WriteTest", MDB_CREATE)
+      env2 <- myLmdb.openEnv(env, "writeTest2.txt", MDB_NOSUBDIR)
+      db <- myLmdb.openDb(env2, "my DB WriteTest2", MDB_CREATE)
       tx <- myLmdb.createWriteTx(env2)
       _ <- myLmdb.putOnLmdb(tx, db, myLmdb.createElement("k7"), myLmdb.createElement("V7"))
       _ <- myLmdb.commitToDb(tx)
-      _ <- putStrLn("Hello")
+      txn <- myLmdb.createReadTx(env2)
+      _ <- myLmdb.readFromDb(txn,db)
     } yield (0)
 
 }
@@ -73,12 +74,14 @@ class LMDB() {
   //trying Read from LMDB
   /** Error:(75, 57) value withFilter is not a member of Iterable[org.lmdbjava.CursorIterator.KeyVal[java.nio.ByteBuffer]]
     * for (kv:CursorIterator.KeyVal[ByteBuffer] <- cursor.iterable) { **/
-  //  def readFromDb(txn: Txn[ByteBuffer], db: Dbi[ByteBuffer]) = {
-  //    val cursor: CursorIterator[ByteBuffer] = db.iterate(txn, KeyRange.all[ByteBuffer]())
-  //    for (kv:CursorIterator.KeyVal[ByteBuffer] <- cursor.iterable) {
-  //      val key = kv.key()
-  //      val value = kv.`val`
-  //      println(UTF_8.decode(key) + " " + UTF_8.decode(value).toString)
-  //    }
-  //  }
+  def readFromDb(txn: Txn[ByteBuffer], db: Dbi[ByteBuffer]) = {
+    val cursor: CursorIterator[ByteBuffer] = db.iterate(txn, KeyRange.all[ByteBuffer]())
+    while(cursor.iterable().iterator().hasNext){
+      val kv = cursor.next()
+      val key = kv.key()
+      val value = kv.`val`()
+      println(UTF_8.decode(key).toString + "   "+ UTF_8.decode(value).toString)
+    }
+    IO.succeed("")
+  }
 }
