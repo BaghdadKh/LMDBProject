@@ -34,14 +34,6 @@ object ModularizeCode extends App {
       _ <- myLmdb.commitToDb(txRead)
     } yield (0)
 
-  //  def game(c:CursorIterator[ByteBuffer]):UIO[CursorIterator[ByteBuffer]]=for {
-  //
-  //    hasNext <- if(c.hasNext) putStrLn(UTF_8.decode(c.next().key()).toString).const(true)
-  //    else putStrLn("baghdad").const(false)
-  //        _  <- if (hasNext)game()  else putStrLn("b")
-  //  }yield(0)
-  //}
-
   def hasNextCur(c:CursorIterator[ByteBuffer])=for{
     has <- IO.succeed(c.hasNext)
   }yield(IO.succeed(has))
@@ -95,19 +87,8 @@ object ModularizeCode extends App {
 
     def readFromDb(txn: Txn[ByteBuffer], db: Dbi[ByteBuffer]) = {
       val cursor: CursorIterator[ByteBuffer] = db.iterate(txn, KeyRange.all[ByteBuffer]())
-
-      //    while(cursor.hasNext){
-      //      val kv = cursor.next()
-      //      val s :UIO[CursorIterator.KeyVal[ByteBuffer]] = IO.succeed(kv)
-      //      printKV(s)
-      //      //          println(UTF_8.decode(kv.key()).toString + "   "+ UTF_8.decode(kv.`val`()).toString)
-      //    }
       IO.succeed(cursor)
     }
-    //  def printKV(kv:UIO[CursorIterator.KeyVal[ByteBuffer]])= {
-    //    for {
-    //      k <- kv
-    //      _ <- putStrLn(UTF_8.decode(k.key()).toString+"   "+UTF_8.decode(k.key()).toString)
-    //    } yield (0)
+
   }
 }
