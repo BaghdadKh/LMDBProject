@@ -29,22 +29,11 @@ object ModularizeCode extends App {
       _ <- myLmdb.putOnLmdb(txnWrite, db, myLmdb.createElement("k7"), myLmdb.createElement("V7"))
       _ <- myLmdb.commitToDb(txnWrite)
       txRead <- myLmdb.createReadTx(env2)
-      cursor <- myLmdb.readFromDb(txRead,db)
-      _ <- loop(cursor)
+      cursor <- myLmdb.readFromDb(txRead, db)
+      _ <- myLmdb.printValues(cursor)
       _ <- myLmdb.commitToDb(txRead)
     } yield (0)
 
-  def hasNextCur(c:CursorIterator[ByteBuffer])=for{
-    has <- IO.succeed(c.hasNext)
-  }yield(IO.succeed(has))
-
-  def loop (c:CursorIterator[ByteBuffer]):ZIO[ModularizeCode.Environment , Nothing,CursorIterator[ByteBuffer]]= for{
-    flag <- hasNextCur(c)
-    has <- flag
-    lo <- if (has){ val kv = c.next();putStrLn(UTF_8.decode(kv.key()).toString+"  " + UTF_8.decode(kv.`val`()).toString).const(true)}
-    else putStrLn("The End of the loop ").const(false)
-    _ <- if(lo) loop(c) else IO.succeed("")
-  } yield c
 
   class LMDB() {
 
@@ -90,5 +79,20 @@ object ModularizeCode extends App {
       IO.succeed(cursor)
     }
 
+    def hasNextCur(c: CursorIterator[ByteBuffer]) = for {
+      has <- IO.succeed(c.hasNext)
+    } yield (IO.succeed(has))
+
+    def printValues(c: CursorIterator[ByteBuffer]): ZIO[ModularizeCode.Environment, Nothing, CursorIterator[ByteBuffer]] = for {
+      flag <- hasNextCur(c)
+      hasNext <- flag
+      loop <- if (hasNext) {
+        val kv = c.next();
+        putStrLn(UTF_8.decode(kv.key()).toString + "  " + UTF_8.decode(kv.`val`()).toString).const(true)
+      }
+      else putStrLn("").const(false)
+      _ <- if (loop) printValues(c) else IO.succeed("")
+    } yield c
   }
+
 }
