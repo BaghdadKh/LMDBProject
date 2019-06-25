@@ -29,59 +29,85 @@ object ModularizeCode extends App {
       _ <- myLmdb.putOnLmdb(txnWrite, db, myLmdb.createElement("k7"), myLmdb.createElement("V7"))
       _ <- myLmdb.commitToDb(txnWrite)
       txRead <- myLmdb.createReadTx(env2)
-
-      c <- myLmdb.readFromDb(txRead,db)
-//      flag <- if (c.hasNext)
-//      _ <- myLmdb.commitToDb(txRead)
+      cursor <- myLmdb.readFromDb(txRead,db)
+      _ <- loop(cursor)
+      _ <- myLmdb.commitToDb(txRead)
     } yield (0)
 
-}
+  //  def game(c:CursorIterator[ByteBuffer]):UIO[CursorIterator[ByteBuffer]]=for {
+  //
+  //    hasNext <- if(c.hasNext) putStrLn(UTF_8.decode(c.next().key()).toString).const(true)
+  //    else putStrLn("baghdad").const(false)
+  //        _  <- if (hasNext)game()  else putStrLn("b")
+  //  }yield(0)
+  //}
 
-class LMDB() {
+  def hasNextCur(c:CursorIterator[ByteBuffer])=for{
+    has <- IO.succeed(c.hasNext)
+  }yield(IO.succeed(has))
 
-  def createEnv(): UIO[Builder[ByteBuffer]] = {
-    IO.succeed(create().setMapSize(10485760).setMaxDbs(1))
-  }
+  def loop (c:CursorIterator[ByteBuffer]):ZIO[ModularizeCode.Environment , Nothing,CursorIterator[ByteBuffer]]= for{
+    flag <- hasNextCur(c)
+    has <- flag
+    lo <- if (has){ val kv = c.next();putStrLn(UTF_8.decode(kv.key()).toString+"  " + UTF_8.decode(kv.`val`()).toString).const(true)}
+    else putStrLn("The End of the loop ").const(false)
+    _ <- if(lo) loop(c) else IO.succeed("")
+  } yield c
 
-  def openEnv(env: Builder[ByteBuffer], lmdbFile: String, flag: EnvFlags) = {
-    val file = new File(lmdbFile)
-    IO.succeed(env.open(file, flag))
-  }
+  class LMDB() {
 
-  def openDb(env: Env[ByteBuffer], lmdbName: String, flag: DbiFlags) = {
-    IO.succeed(env.openDbi(lmdbName, flag))
-  }
-
-  def createElement[A](value: A): ByteBuffer = {
-    val bb = allocateDirect(200)
-    bb.put(value.toString.getBytes(UTF_8)).flip
-    bb
-    //IO.succeed(bb)
-  }
-
-  def createReadTx(env: Env[ByteBuffer]) = {
-    IO.succeed(env.txnRead())
-  }
-
-  def createWriteTx(env: Env[ByteBuffer]) = {
-    IO.succeed(env.txnWrite())
-  }
-
-  def putOnLmdb(tx: Txn[ByteBuffer], db: Dbi[ByteBuffer], key: ByteBuffer, value: ByteBuffer) = {
-    IO.succeed(db.put(tx, key, value))
-  }
-
-  def commitToDb(tx: Txn[ByteBuffer]) = {
-    IO.succeed(tx.commit())
-
-  }
-
-  def readFromDb(txn: Txn[ByteBuffer], db: Dbi[ByteBuffer]) = {
-    val cursor: CursorIterator[ByteBuffer] = db.iterate(txn, KeyRange.all[ByteBuffer]())
-    while(cursor.hasNext){
-      val kv = cursor.next()
-      println(UTF_8.decode(kv.key()).toString + "   "+ UTF_8.decode(kv.`val`()).toString)
+    def createEnv(): UIO[Builder[ByteBuffer]] = {
+      IO.succeed(create().setMapSize(10485760).setMaxDbs(1))
     }
-    IO.succeed(cursor)
+
+    def openEnv(env: Builder[ByteBuffer], lmdbFile: String, flag: EnvFlags) = {
+      val file = new File(lmdbFile)
+      IO.succeed(env.open(file, flag))
+    }
+
+    def openDb(env: Env[ByteBuffer], lmdbName: String, flag: DbiFlags) = {
+      IO.succeed(env.openDbi(lmdbName, flag))
+    }
+
+    def createElement[A](value: A): ByteBuffer = {
+      val bb = allocateDirect(200)
+      bb.put(value.toString.getBytes(UTF_8)).flip
+      bb
+      //IO.succeed(bb)
+    }
+
+    def createReadTx(env: Env[ByteBuffer]) = {
+      IO.succeed(env.txnRead())
+    }
+
+    def createWriteTx(env: Env[ByteBuffer]) = {
+      IO.succeed(env.txnWrite())
+    }
+
+    def putOnLmdb(tx: Txn[ByteBuffer], db: Dbi[ByteBuffer], key: ByteBuffer, value: ByteBuffer) = {
+      IO.succeed(db.put(tx, key, value))
+    }
+
+    def commitToDb(tx: Txn[ByteBuffer]) = {
+      IO.succeed(tx.commit())
+
+    }
+
+    def readFromDb(txn: Txn[ByteBuffer], db: Dbi[ByteBuffer]) = {
+      val cursor: CursorIterator[ByteBuffer] = db.iterate(txn, KeyRange.all[ByteBuffer]())
+
+      //    while(cursor.hasNext){
+      //      val kv = cursor.next()
+      //      val s :UIO[CursorIterator.KeyVal[ByteBuffer]] = IO.succeed(kv)
+      //      printKV(s)
+      //      //          println(UTF_8.decode(kv.key()).toString + "   "+ UTF_8.decode(kv.`val`()).toString)
+      //    }
+      IO.succeed(cursor)
+    }
+    //  def printKV(kv:UIO[CursorIterator.KeyVal[ByteBuffer]])= {
+    //    for {
+    //      k <- kv
+    //      _ <- putStrLn(UTF_8.decode(k.key()).toString+"   "+UTF_8.decode(k.key()).toString)
+    //    } yield (0)
   }
 }
