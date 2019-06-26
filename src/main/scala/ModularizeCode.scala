@@ -41,6 +41,10 @@ object ModularizeCode extends App {
       IO.succeed(create().setMapSize(10485760).setMaxDbs(1))
     }
 
+    def closeTxn(txn:Txn[ByteBuffer]){
+      IO.succeed(txn.close())
+    }
+
     def openEnv(env: Builder[ByteBuffer], lmdbFile: String, flag: EnvFlags) = {
       val file = new File(lmdbFile)
       IO.succeed(env.open(file, flag))
