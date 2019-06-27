@@ -8,3 +8,5 @@ libraryDependencies += "org.lmdbjava" % "lmdbjava" % "0.7.0"
 
 libraryDependencies += "org.scalaz" %% "scalaz-zio" % "1.0-RC5"
 
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"
+

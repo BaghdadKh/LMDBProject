@@ -1,4 +1,5 @@
-[0m[[0m[33mwarn[0m] [0m[0m/mnt/c/Users/Lenovo/Desktop/NEws/Mar/LMDB/LMDBProject/src/main/scala/LMDBMain.scala:30:5: A try without a catch or finally is equivalent to putting its body in a block; no exceptions are handled.[0m
+[0m[[0m[33mwarn[0m] [0m[0mC:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\src\main\scala\main\ZioScenarios.scala:27:5: A try without a catch or finally is equivalent to putting its body in a block; no exceptions are handled.[0m
 [0m[[0m[33mwarn[0m] [0m[0m    try {[0m
 [0m[[0m[33mwarn[0m] [0m[0m    ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere was one deprecation warning (since 2.12.0); re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m

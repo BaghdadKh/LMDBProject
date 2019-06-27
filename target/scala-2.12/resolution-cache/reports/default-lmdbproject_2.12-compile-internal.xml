@@ -7,7 +7,7 @@
 		revision="0.1"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20190623103121"/>
+		date="20190627103331"/>
 	<dependencies>
 		<module organisation="org.scalaz" name="scalaz-zio_2.12">
 			<revision name="1.0-RC5" status="release" pubdate="20190601003244" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://scalaz.github.io/scalaz-zio/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="12">

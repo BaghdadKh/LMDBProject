@@ -22,19 +22,23 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.12.8:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.lmdbjava:lmdbjava:0.7.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.ow2.asm:asm-util:5.0.3:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.ow2.asm:asm-tree:5.0.3:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.ow2.asm:asm-commons:5.0.3:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.ow2.asm:asm-analysis:5.0.3:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.ow2.asm:asm:5.0.3:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.github.jnr:jnr-x86asm:1.0.2:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.github.jnr:jnr-ffi:2.1.9:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.github.jnr:jnr-constants:0.9.12:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.github.jnr:jnr-a64asm:1.0.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.github.jnr:jffi:1.2.18:native:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.github.jnr:jffi:1.2.18:jar" level="project" />
-    <orderEntry type="library" name="sbt: org.scalaz:scalaz-zio-stacktracer_2.12:1.0-RC5:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.scalatest:scalatest_2.12:3.0.5:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.scalactic:scalactic_2.12:3.0.5:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.scala-lang.modules:scala-xml_2.12:1.0.6:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="sbt: org.scala-lang:scala-reflect:2.12.8:jar" level="project" />
     <orderEntry type="library" name="sbt: org.scalaz:scalaz-zio_2.12:1.0-RC5:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.scalaz:scalaz-zio-stacktracer_2.12:1.0-RC5:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jffi:1.2.18:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jffi:1.2.18:native:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jnr-a64asm:1.0.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jnr-constants:0.9.12:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jnr-ffi:2.1.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.github.jnr:jnr-x86asm:1.0.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ow2.asm:asm:5.0.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ow2.asm:asm-analysis:5.0.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ow2.asm:asm-commons:5.0.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ow2.asm:asm-tree:5.0.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.ow2.asm:asm-util:5.0.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.lmdbjava:lmdbjava:0.7.0:jar" level="project" />
   </component>
 </module>

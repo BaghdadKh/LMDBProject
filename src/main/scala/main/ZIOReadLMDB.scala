@@ -1,15 +1,16 @@
+package main
+
 import java.io.File
 import java.nio.ByteBuffer
 import java.nio.ByteBuffer.allocateDirect
 import java.nio.charset.StandardCharsets.UTF_8
 
 import org.lmdbjava.DbiFlags.MDB_CREATE
-import org.lmdbjava.Env
 import org.lmdbjava.Env.{Builder, create}
 import org.lmdbjava.EnvFlags.MDB_NOSUBDIR
 import scalaz.zio._
 import scalaz.zio.console._
-// Create LMDB and use ZIO to read value from
+// Create utils.LMDB and use ZIO to read value from
 object ZIOReadLMDB extends App {
   //Setting env
   val DB_NAME = "my DB2"

@@ -1,3 +1,5 @@
+package main
+
 import java.io.File
 import java.nio.ByteBuffer
 import java.nio.ByteBuffer.allocateDirect
@@ -55,7 +57,7 @@ object ZioScenarios {
     fact(i, 1)
   }
 
-  // method to return wrapped factorial to put on LMDB
+  // method to return wrapped factorial to put on utils.LMDB
   def factorial2(i: BigInt): ZIO[Env[ByteBuffer], Unit, BigInt] = {
     def fact(i: BigInt, accumulator: BigInt): BigInt = {
       if (i <= 1)

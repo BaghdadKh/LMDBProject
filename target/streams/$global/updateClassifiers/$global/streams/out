@@ -5,7 +5,7 @@
 [debug] resolving dependencies for configuration 'compile'
 [debug] == resolving dependencies for default#lmdbproject$sources;0.1 [compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [compile->default]
-[debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.12.8 {compile=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], runtime=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], test=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], compile-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], runtime-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], test-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], scala-tool=[default, master(*), compile, runtime(*), master(compile), runtime, optional, optional(default), compile(*), master]}
+[debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-library;2.12.8 {compile=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], runtime=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], test=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], compile-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], runtime-internal=[default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], test-internal=[default, master(*), compile, runtime(*), master(compile), runtime, default(compile), compile(*), master], scala-tool=[default, master(*), compile, runtime(*), master(compile), runtime, optional, optional(default), compile(*), master]}
 [debug] sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.12.8
 [debug] 	found org.scala-lang#scala-library;2.12.8 in sbt-chain
 [debug] 	[2.12.8] org.scala-lang#scala-library;2.12.8
@@ -454,6 +454,7 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [compile->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [compile->compile(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [compile->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [compile->master(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [compile->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [compile->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [compile->compile]
@@ -694,10 +695,26 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.ow2.asm#asm-util;5.0.3 [runtime->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.ow2.asm#asm-util;5.0.3 [runtime->compile(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.ow2.asm#asm-util;5.0.3 [runtime->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->default]
+[debug] sbt-chain: Checking cache for: dependency: org.scalatest#scalatest_2.12;3.0.5 {test=[default, compile, runtime, default(compile), master], test-internal=[default, compile, runtime, default(compile), master]}
+[debug] sbt-chain: module revision found in cache: org.scalatest#scalatest_2.12;3.0.5
+[debug] 	found org.scalatest#scalatest_2.12;3.0.5 in sbt-chain
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->default(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->default]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->runtime]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile]
@@ -710,6 +727,17 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] sbt-chain: Checking cache for: dependency: org.scalactic#scalactic_2.12;3.0.5 {test=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: org.scalactic#scalactic_2.12;3.0.5
+[debug] 	found org.scalactic#scalactic_2.12;3.0.5 in sbt-chain
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->runtime(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->master(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [test->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [test->compile]
@@ -750,6 +778,17 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio_2.12;1.0-RC5 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio_2.12;1.0-RC5 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio_2.12;1.0-RC5 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] sbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.12;1.0.6 {test=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], scala-tool=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.12;1.0.6
+[debug] 	found org.scala-lang.modules#scala-xml_2.12;1.0.6 in sbt-chain
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->runtime(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->master(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-a64asm;1.0.0 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-a64asm;1.0.0 [test->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-a64asm;1.0.0 [test->compile]
@@ -798,6 +837,18 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-constants;0.9.12 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-constants;0.9.12 [test->compile(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-constants;0.9.12 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->compile]
+[debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.12.8 {test=[compile, runtime(*), master(compile), runtime, compile(*), master], test-internal=[compile, runtime(*), master(compile), runtime, compile(*), master], scala-tool=[compile, runtime(*), master(compile), runtime, compile(*), master]}
+[debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.12.8
+[debug] 	found org.scala-lang#scala-reflect;2.12.8 in sbt-chain
+[debug] 	[2.12.8] org.scala-lang#scala-reflect;2.12.8
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->runtime(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->master(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->compile(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5 [test->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5 [test->compile]
@@ -1737,10 +1788,23 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.ow2.asm#asm-util;5.0.3 [runtime->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.ow2.asm#asm-util;5.0.3 [runtime->compile(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.ow2.asm#asm-util;5.0.3 [runtime->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->default]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->default(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->default]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->runtime]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile]
@@ -1753,6 +1817,14 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->compile(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->runtime(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->master(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->compile(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [test->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [test->compile]
@@ -1793,6 +1865,14 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio_2.12;1.0-RC5 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio_2.12;1.0-RC5 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio_2.12;1.0-RC5 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->runtime(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->master(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->compile(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-a64asm;1.0.0 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-a64asm;1.0.0 [test->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-a64asm;1.0.0 [test->compile]
@@ -1841,6 +1921,14 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-constants;0.9.12 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-constants;0.9.12 [test->compile(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-constants;0.9.12 [test->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->runtime(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->master(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->compile(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5 [test->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5 [test->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5 [test->compile]
@@ -1867,10 +1955,23 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.ow2.asm#asm-util;5.0.3 [test->master]
 [debug] == resolving dependencies for default#lmdbproject$sources;0.1 [optional]
 [debug] == resolving dependencies for default#lmdbproject$sources;0.1 [provided]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->default]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->default(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalatest#scalatest_2.12;3.0.5 [test-internal->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->default]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->runtime]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->master(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->compile]
@@ -1883,6 +1984,14 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->compile(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [test-internal->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->runtime(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->master(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->compile(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalactic#scalactic_2.12;3.0.5 [test-internal->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [test-internal->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [test-internal->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-x86asm;1.0.2 [test-internal->compile]
@@ -1923,6 +2032,14 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio_2.12;1.0-RC5 [test-internal->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio_2.12;1.0-RC5 [test-internal->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio_2.12;1.0-RC5 [test-internal->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->runtime(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->master(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->compile(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [test-internal->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-a64asm;1.0.0 [test-internal->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-a64asm;1.0.0 [test-internal->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-a64asm;1.0.0 [test-internal->compile]
@@ -1971,6 +2088,14 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-constants;0.9.12 [test-internal->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-constants;0.9.12 [test-internal->compile(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->com.github.jnr#jnr-constants;0.9.12 [test-internal->master]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test-internal->runtime(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test-internal->master(compile)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test-internal->runtime]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test-internal->compile]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test-internal->compile(*)]
+[debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [test-internal->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5 [test-internal->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5 [test-internal->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5 [test-internal->compile]
@@ -2017,9 +2142,6 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [scala-tool->compile(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-library;2.12.8 [scala-tool->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [scala-tool->compile]
-[debug] sbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.12;1.0.6 {scala-tool=[compile, runtime(*), master(compile), runtime, compile(*), master]}
-[debug] sbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.12;1.0.6
-[debug] 	found org.scala-lang.modules#scala-xml_2.12;1.0.6 in sbt-chain
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [scala-tool->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [scala-tool->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang.modules#scala-xml_2.12;1.0.6 [scala-tool->master(compile)]
@@ -2041,10 +2163,6 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-compiler;2.12.8 [scala-tool->optional(default)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-compiler;2.12.8 [scala-tool->master]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [scala-tool->compile]
-[debug] sbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.12.8 {scala-tool=[compile, runtime(*), master(compile), runtime, compile(*), master]}
-[debug] sbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.12.8
-[debug] 	found org.scala-lang#scala-reflect;2.12.8 in sbt-chain
-[debug] 	[2.12.8] org.scala-lang#scala-reflect;2.12.8
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [scala-tool->runtime(*)]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [scala-tool->compile]
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->org.scala-lang#scala-reflect;2.12.8 [scala-tool->master(compile)]
@@ -2061,121 +2179,27 @@
 [debug] == resolving dependencies default#lmdbproject$sources;0.1->jline#jline;2.14.6 [scala-tool->master]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 	[NOT REQUIRED] com.github.jnr#jnr-a64asm;1.0.0!jnr-a64asm.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lenovo\.ivy2
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] 	[NOT REQUIRED] org.ow2.asm#asm-analysis;5.0.3!asm-analysis.jar(src)
-[debug] 	[NOT REQUIRED] org.scalaz#scalaz-zio_2.12;1.0-RC5!scalaz-zio_2.12.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lenovo\.ivy2
-[debug] no default ivy user dir defined: set to C:\Users\Lenovo\.ivy2
-[debug] no default cache defined: set to C:\Users\Lenovo\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] 	[NOT REQUIRED] com.github.jnr#jnr-x86asm;1.0.2!jnr-x86asm.jar(src)
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default ivy user dir defined: set to C:\Users\Lenovo\.ivy2
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to C:\Users\Lenovo\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] no default cache defined: set to C:\Users\Lenovo\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] settings loaded (38ms)
-[debug] 	default cache: C:\Users\Lenovo\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] 	[NOT REQUIRED] org.lmdbjava#lmdbjava;0.7.0!lmdbjava.jar(src)
-[debug] settings loaded (189ms)
-[debug] 	default cache: C:\Users\Lenovo\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] no default ivy user dir defined: set to C:\Users\Lenovo\.ivy2
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] com.github.jnr#jffi;1.2.18!jffi.jar(src)
-[debug] no default cache defined: set to C:\Users\Lenovo\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (101ms)
-[debug] 	default cache: C:\Users\Lenovo\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] no default cache defined: set to C:\Users\Lenovo\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] settings loaded (101ms)
-[debug] 	default cache: C:\Users\Lenovo\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (66ms)
-[debug] 	default cache: C:\Users\Lenovo\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
-[debug] 	[NOT REQUIRED] org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5!scalaz-zio-stacktracer_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.8!scala-library.jar(src)
-[debug] no default ivy user dir defined: set to C:\Users\Lenovo\.ivy2
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-public.xml
-[debug] no default cache defined: set to C:\Users\Lenovo\.ivy2\cache
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-shared.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-local.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-main-chain.xml
-[debug] including url: jar:file:/C:/Users/Lenovo/.sbt/boot/scala-2.12.7/org.scala-sbt/sbt/1.2.8/ivy-2.3.0-sbt-cb9cc189e9f3af519f9f102e6c5d446488ff6832.jar!/org/apache/ivy/core/settings/ivysettings-default-chain.xml
-[debug] settings loaded (16ms)
-[debug] 	default cache: C:\Users\Lenovo\.ivy2\cache
-[debug] 	default resolver: default
-[debug] 	-- 5 resolvers:
-[debug] 	shared [file]
-[debug] 	default [chain] [local, main]
-[debug] 	public [ibiblio]
-[debug] 	main [chain] [shared, public]
-[debug] 	local [file]
+[debug] 	[NOT REQUIRED] com.github.jnr#jnr-a64asm;1.0.0!jnr-a64asm.jar(src)
 [debug] 	[NOT REQUIRED] org.ow2.asm#asm;5.0.3!asm.jar(src)
-[debug] 	[NOT REQUIRED] org.ow2.asm#asm-util;5.0.3!asm-util.jar(src)
-[debug] 	[NOT REQUIRED] com.github.jnr#jnr-constants;0.9.12!jnr-constants.jar(src)
-[debug] 	[NOT REQUIRED] com.github.jnr#jnr-ffi;2.1.9!jnr-ffi.jar(src)
+[debug] 	[NOT REQUIRED] org.ow2.asm#asm-analysis;5.0.3!asm-analysis.jar(src)
+[debug] 	[NOT REQUIRED] com.github.jnr#jffi;1.2.18!jffi.jar(src)
 [debug] 	[NOT REQUIRED] org.ow2.asm#asm-tree;5.0.3!asm-tree.jar(src)
+[debug] 	[NOT REQUIRED] com.github.jnr#jnr-constants;0.9.12!jnr-constants.jar(src)
 [debug] 	[NOT REQUIRED] org.ow2.asm#asm-commons;5.0.3!asm-commons.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.8!scala-reflect.jar(src)
+[debug] 	[NOT REQUIRED] org.lmdbjava#lmdbjava;0.7.0!lmdbjava.jar(src)
+[debug] 	[NOT REQUIRED] org.ow2.asm#asm-util;5.0.3!asm-util.jar(src)
+[debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.0.5!scalatest_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
+[debug] 	[NOT REQUIRED] com.github.jnr#jnr-ffi;2.1.9!jnr-ffi.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.8!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] org.scalaz#scalaz-zio_2.12;1.0-RC5!scalaz-zio_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scalaz#scalaz-zio-stacktracer_2.12;1.0-RC5!scalaz-zio-stacktracer_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.8!scala-reflect.jar(src)
+[debug] 	[NOT REQUIRED] org.scalactic#scalactic_2.12;3.0.5!scalactic_2.12.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
-[debug] :: resolution report :: resolve 13153ms :: artifacts dl 615ms
+[debug] 	[NOT REQUIRED] com.github.jnr#jnr-x86asm;1.0.2!jnr-x86asm.jar(src)
+[debug] :: resolution report :: resolve 1051ms :: artifacts dl 28ms
 [debug] 	report for default#lmdbproject$sources;0.1 compile produced in C:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\target\scala-2.12\resolution-cache\reports\default-lmdbproject$sources-compile.xml
 [debug] 	report for default#lmdbproject$sources;0.1 runtime produced in C:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\target\scala-2.12\resolution-cache\reports\default-lmdbproject$sources-runtime.xml
 [debug] 	report for default#lmdbproject$sources;0.1 test produced in C:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\target\scala-2.12\resolution-cache\reports\default-lmdbproject$sources-test.xml
@@ -2187,4 +2211,4 @@
 [debug] 	report for default#lmdbproject$sources;0.1 plugin produced in C:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\target\scala-2.12\resolution-cache\reports\default-lmdbproject$sources-plugin.xml
 [debug] 	report for default#lmdbproject$sources;0.1 pom produced in C:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\target\scala-2.12\resolution-cache\reports\default-lmdbproject$sources-pom.xml
 [debug] 	report for default#lmdbproject$sources;0.1 scala-tool produced in C:\Users\Lenovo\Desktop\NEws\Mar\LMDB\LMDBProject\target\scala-2.12\resolution-cache\reports\default-lmdbproject$sources-scala-tool.xml
-[debug] 	resolve done (13153ms resolve - 615ms download)
+[debug] 	resolve done (1051ms resolve - 28ms download)
