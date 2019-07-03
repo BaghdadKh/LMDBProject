@@ -21,6 +21,7 @@ object ModularizeCode extends App {
       cursor <- myLmdb.readFromDb(txRead, db)
       _ <- myLmdb.printValues(cursor)
       _ <- myLmdb.commitToDb(txRead)
+
     } yield (0)
 
 }

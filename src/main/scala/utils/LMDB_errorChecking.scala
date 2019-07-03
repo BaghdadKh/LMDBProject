@@ -5,32 +5,40 @@ import java.nio.ByteBuffer
 import java.nio.ByteBuffer.allocateDirect
 import java.nio.charset.StandardCharsets.UTF_8
 
-import org.lmdbjava.{CursorIterator, Dbi, Txn}
 import main.ModularizeCode
-import org.lmdbjava.Env.{Builder, create}
+import org.lmdbjava.Env.{AlreadyClosedException, Builder, create}
 import org.lmdbjava._
-import scalaz.zio.{App, IO, UIO, ZIO}
 import scalaz.zio.console.putStrLn
+import scalaz.zio.{App, IO, UIO, ZIO}
 
-class LMDB_v2 extends App{
-  override def run(args: List[String]) = for {
-    _ <- putStrLn("")
-  }yield 0
+object LMDB_errorChecking extends App {
+  def run(args: List[String]) =
+    myApp.fold(_ => 1, _ => 0)
 
-  def createEnv(): UIO[Builder[ByteBuffer]] = {
-    IO.succeed(create().setMapSize(10485760).setMaxDbs(1))
-  }
+  val myApp =
+    for {
+      env <- createEnv()
+      envSize <- IO.succeed(setSizeEnv(-8,env))
+      _ <- putStrLn(envSize.toString)
+    } yield ()
 
-  def closeTxn(txn:Txn[ByteBuffer]){
+  def createEnv(): ZIO[Any, Throwable, Builder[ByteBuffer]] = for {
+    environment <- IO.succeed(create())
+  } yield (environment)
+
+  def setSizeEnv(size :Int ,env : Builder[ByteBuffer]):Either[String,Builder[ByteBuffer]] =
+     if (size < 0 ) Left("The size is illegal , negative number ") else Right(env.setMapSize(size))
+
+  def closeTxn(txn:Txn[ByteBuffer]):ZIO[Any ,Throwable,Unit]={
     IO.succeed(txn.close())
   }
 
-  def openEnv(env: UIO[Builder[ByteBuffer]], lmdbFile: File, flag: EnvFlags):UIO[Env[ByteBuffer]] =for {
+  def openEnv(env: ZIO[Any,Throwable, Builder[ByteBuffer]], lmdbFile: File, flag: EnvFlags):ZIO[Any ,Throwable,Env[ByteBuffer]] =for {
     environment <- env
     openedEnv <- IO.succeed(environment.open(lmdbFile, flag))
   }yield openedEnv
 
-  def openDb(env: UIO[Env[ByteBuffer]], lmdbName: String, flag: DbiFlags) = for{
+  def openDb(env: ZIO[Any,Throwable, Env[ByteBuffer]], lmdbName: String, flag: DbiFlags):ZIO[Any ,Throwable,Dbi[ByteBuffer]] = for{
     environment <- env
     db <- IO.succeed(environment.openDbi(lmdbName, flag))
   } yield db
@@ -41,17 +49,17 @@ class LMDB_v2 extends App{
     bb
   }
 
-  def createReadTx(env: UIO[Env[ByteBuffer]]) = for {
+  def createReadTx(env: UIO[Env[ByteBuffer]]):ZIO[Any, AlreadyClosedException,Txn[ByteBuffer]] = for {
     environment <- env
     txnRead <- IO.succeed(environment.txnRead())
   }yield txnRead
 
-  def createWriteTx(env: UIO[Env[ByteBuffer]]) = for{
+  def createWriteTx(env: UIO[Env[ByteBuffer]]):ZIO[Any, AlreadyClosedException,Txn[ByteBuffer]] = for{
     environment <- env
     txnWrite <- IO.succeed(environment.txnWrite())
   } yield txnWrite
 
-  def putOnLmdb(tx: UIO[Txn[ByteBuffer]], db: UIO[Dbi[ByteBuffer]], key: ByteBuffer, value: ByteBuffer) = for{
+  def putOnLmdb(tx: UIO[Txn[ByteBuffer]], db: UIO[Dbi[ByteBuffer]], key: ByteBuffer, value: ByteBuffer):ZIO[Any , Throwable,Boolean] = for{
     db2 <- db
     tx2 <- tx
     put <- IO.succeed(db2.put(tx2, key, value))
