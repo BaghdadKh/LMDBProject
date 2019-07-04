@@ -9,23 +9,24 @@ import main.ModularizeCode
 import org.lmdbjava.Env.{AlreadyClosedException, Builder, create}
 import org.lmdbjava.EnvFlags.MDB_NOSUBDIR
 import org.lmdbjava._
-import scalaz.zio.console.putStrLn
-import scalaz.zio.{App, IO, UIO, ZIO}
+import scalaz.zio._
+import scalaz.zio.console.{Console, putStrLn}
 
-object LMDB_errorChecking extends App {
+object LMDB_errorUsingEffects  extends App {
   def run(args: List[String]) =
     myApp.fold(_ => 1, _ => 0)
 
   val myApp =
     for {
       env <- createEnv()
-      env2 <- IO.succeed(setSizeEnv(8852, env))
-      envSize <- IO.succeed(env2).map(value => value match {
-        case Left(l) => putStrLn("Error")
-        case Right(r) => r.setMaxDbs(1)
-      })
-      _ <- envSize match {
-        case e: Builder[ByteBuffer] => openEnv(IO.succeed(e), null, MDB_NOSUBDIR)
+      env3 <- setSizeEnv2(-98888, env)
+      environment <- env3 match {
+        case builder: Builder[ByteBuffer] => IO.effect(builder.setMaxDbs(1)).catchAll(_ => putStrLn("error in max db "))
+        case _ => putStrLn("error in env  ")
+      }
+      _ <- environment match {
+        case builder: Builder[ByteBuffer] => IO.effect(openEnv(IO.succeed(builder), new File("test2.txt"), MDB_NOSUBDIR)).catchAll(_ => putStrLn("error in open db "))
+        case _ => putStrLn("error in max   ")
       }
     } yield ()
 
@@ -33,8 +34,8 @@ object LMDB_errorChecking extends App {
     environment <- IO.succeed(create())
   } yield (environment)
 
-  def setSizeEnv(size: Int, env: Builder[ByteBuffer]): Either[String, Builder[ByteBuffer]] =
-    if (size < 0) Left("The size is illegal , negative number ") else Right(env.setMapSize(size))
+  def setSizeEnv2(size: Int, env: Builder[ByteBuffer]): ZIO[Console, Throwable, Any]=
+    IO.effect(env.setMapSize(size)).catchAll(e => putStrLn(e.getMessage))
 
   def openEnv(env: ZIO[Any, Throwable, Builder[ByteBuffer]], lmdbFile: File, flag: EnvFlags) = for {
     environment <- env
@@ -55,7 +56,6 @@ object LMDB_errorChecking extends App {
     bb.put(value.toString.getBytes(UTF_8)).flip
     bb
   }
-
   def createReadTx(env: UIO[Env[ByteBuffer]]): ZIO[Any, AlreadyClosedException, Txn[ByteBuffer]] = for {
     environment <- env
     txnRead <- IO.succeed(environment.txnRead())
