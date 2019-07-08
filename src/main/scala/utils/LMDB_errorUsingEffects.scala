@@ -22,7 +22,7 @@ object LMDB_errorUsingEffects extends App {
     for {
       env <- createEnv()
 
-      env3 <- setSizeEnv2(-98888, env)
+      env3 <- setSizeEnv2(98888, env)
 
       environment <- env3 match {
         case builder: Builder[ByteBuffer] => IO.effect(builder.setMaxDbs(1)).catchAll(_ => putStrLn("error in max db "))
