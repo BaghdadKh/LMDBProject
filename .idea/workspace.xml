@@ -2,106 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfd05eef-6513-4961-aef5-34e08a5d4ef7" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App0$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App0.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$Console$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$Console.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$IO$$anon$1.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$IO$$anon$2.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$IO$$anon$3.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$IO$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$IO.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$Program$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$Program.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$ProgramSyntax.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$Random$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$Random.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$TestData$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$TestData.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$TestIO$$anon$4.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$TestIO$$anon$5.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$TestIO$$anon$6.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$TestIO$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1$TestIO.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App1.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$TestData$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$TestData.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$TestIO$$anon$10.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$TestIO$$anon$11.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$TestIO$$anon$12.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$TestIO$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$TestIO.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$Console$$anon$8.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$Console$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$Console.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$IO$$anon$7.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$IO$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$IO.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$Program$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$Program.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$ProgramSyntax.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$Random$$anon$9.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$Random$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2$stdlib$Random.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App2.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$TestData$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$TestData.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$TestIO$$anon$16.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$TestIO$$anon$17.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$TestIO$$anon$18.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$TestIO$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$TestIO.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$Console$$anon$14.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$Console$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$Console.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$DoYouWantToContinue$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$DoYouWantToContinue.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$PleaseGuess$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$PleaseGuess.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$ThatIsNotValid$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$ThatIsNotValid.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$WelcomeToGame$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$WelcomeToGame.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$WhatIsYourName$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$YouGuessedRight$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$YouGuessedRight.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$YouGuessedWrong$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut$YouGuessedWrong.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ConsoleOut.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$IO$$anon$13.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$IO$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$IO.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$Program$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$Program.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$ProgramSyntax.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$Random$$anon$15.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$Random$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3$stdlib$Random.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/fpmax/App3.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/main/BankSceanario$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/main/BankSceanario.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/main/ModularizeCode$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/main/ModularizeCode.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/main/ZIOReadLMDB$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/main/ZIOReadLMDB.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/main/ZioScenarios$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/main/ZioScenarios.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/utils/Bank.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/utils/LMDB.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/utils/LMDB_errorChecking$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/utils/LMDB_errorChecking.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/utils/LMDB_errorUsingEffects$.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/utils/LMDB_errorUsingEffects.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/classes/utils/LMDB_v2.class" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/target/scala-2.12/test-classes/lmdbTests/foundValueTest.class" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/utils/LMDB_errorUsingEffects.scala" afterPath="$PROJECT_DIR$/src/main/scala/utils/LMDB_errorUsingEffects.scala" />
+      <change beforePath="$PROJECT_DIR$/test2.txt" afterPath="$PROJECT_DIR$/test2.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -131,11 +34,9 @@
       <file leaf-file-name="LMDB_errorUsingEffects.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/utils/LMDB_errorUsingEffects.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding>
-                <element signature="e#15#34#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -144,8 +45,11 @@
         <entry file="jar://$USER_HOME$/.ivy2/cache/org.lmdbjava/lmdbjava/srcs/lmdbjava-0.7.0-sources.jar!/org/lmdbjava/Env.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="133">
-              <caret line="511" column="22" lean-forward="false" selection-start-line="511" selection-start-column="22" selection-end-line="511" selection-end-column="22" />
-              <folding />
+              <caret line="365" column="16" lean-forward="false" selection-start-line="365" selection-start-column="16" selection-end-line="365" selection-end-column="16" />
+              <folding>
+                <element signature="e#12028#12029#0" expanded="true" />
+                <element signature="e#12054#12055#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -276,48 +180,14 @@
               <item name="LMDBProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="LMDBProject" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="LMDBProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LMDBProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LMDBProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LMDBProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LMDBProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LMDBProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LMDBProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LMDBProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="LMDBProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="LMDBProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -542,19 +412,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29674488" sideWeight="0.5128593" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20228384" sideWeight="0.4871407" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32952693" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26427406" sideWeight="0.4871407" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10900833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04390613" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19771242" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -819,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34680">
           <caret line="1755" column="12" lean-forward="false" selection-start-line="1755" selection-start-column="12" selection-end-line="1755" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -835,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35800">
           <caret line="1849" column="25" lean-forward="false" selection-start-line="1849" selection-start-column="25" selection-end-line="1849" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,9 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#34#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -860,9 +724,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="e#15#34#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -909,18 +770,19 @@
     <entry file="jar://$USER_HOME$/.ivy2/cache/org.lmdbjava/lmdbjava/srcs/lmdbjava-0.7.0-sources.jar!/org/lmdbjava/Env.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="511" column="22" lean-forward="false" selection-start-line="511" selection-start-column="22" selection-end-line="511" selection-end-column="22" />
-          <folding />
+          <caret line="365" column="16" lean-forward="false" selection-start-line="365" selection-start-column="16" selection-end-line="365" selection-end-column="16" />
+          <folding>
+            <element signature="e#12028#12029#0" expanded="true" />
+            <element signature="e#12054#12055#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/utils/LMDB_errorUsingEffects.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#15#34#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

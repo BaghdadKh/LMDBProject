@@ -21,46 +21,46 @@ object LMDB_errorUsingEffects extends App {
   val myApp =
     for {
       env <- createEnv()
-
-      env3 <- setSizeEnv2(98888, env)
-
+      env3 <-   setSizeEnv2(98888, env)
       environment <- env3 match {
-        case builder: Builder[ByteBuffer] => IO.effect(builder.setMaxDbs(1)).catchAll(_ => putStrLn("error in max db "))
+        case builder: Builder[ByteBuffer] => IO.effect(builder.setMaxDbs(1)).catchAll(e => putStrLn(e.getMessage))
+        case error:String => IO.succeed(error.toString)
       }
-
       openedEnv <- environment match {
         case builder: Builder[ByteBuffer] => openEnv(IO.succeed(builder), new File("test2.txt"), MDB_NOSUBDIR)
+        case er:String  => IO.succeed(er)
       }
-
       openedDb <- openedEnv match {
-        case env: Env[ByteBuffer] => openDb(IO.succeed(env), null, MDB_CREATE)
+        case env: Env[ByteBuffer] => openDb(IO.succeed(env), "my db", MDB_CREATE)
+        case error:String => IO.succeed(error)
       }
-
       writeTx <- openedEnv match {
         case env: Env[ByteBuffer] => createWriteTx(IO.succeed(env))
+        case er:String => IO.succeed(er)
       }
-
       putElement <- (openedDb, writeTx) match {
         case (dbi: Dbi[ByteBuffer], writeTx: Txn[ByteBuffer]) => putOnLmdb(IO.succeed(writeTx), IO.succeed(dbi), createElement("Naseeem"), createElement(2009))
+        case (error,er) => IO.succeed("there is error  both in dbi and transaction ")
       }
-
-      commit <- writeTx match {
+      _ <- writeTx match {
         case tx: Txn[ByteBuffer] => commitToDb(IO.succeed(tx))
+        case er :String => putStrLn(er)
       }
-
       readTx <- openedEnv match {
         case env: Env[ByteBuffer] => createReadTx(IO.succeed(env))
+        case er => putStrLn(er.toString)
       }
-
       cursor <- (openedDb, readTx) match {
         case (dbi: Dbi[ByteBuffer], tx: Txn[ByteBuffer]) => readFromDb(IO.succeed(tx), IO.succeed(dbi))
+        case er => IO.succeed(er.toString)
       }
       _ <- cursor match {
         case cur: CursorIterator[ByteBuffer] => printValues(cur)
+        case _ => putStrLn("error in read ")
       }
-
       close <- readTx match {
         case txn: Txn[ByteBuffer] => closeTxn(txn)
+        case er => putStrLn(er.toString)
       }
     } yield ()
 
@@ -68,23 +68,23 @@ object LMDB_errorUsingEffects extends App {
     environment <- IO.succeed(create())
   } yield (environment)
 
-  def setSizeEnv2(size: Int, env: Builder[ByteBuffer]): ZIO[Console, Throwable, Any] =
-    IO.effect(env.setMapSize(size)).catchAll(e => putStrLn(e.getMessage))
+  def setSizeEnv2(size: Int, env: Builder[ByteBuffer]): ZIO[Any, Throwable, Any] =
+    IO.effect(env.setMapSize(size)).catchAll(e => IO.succeed(e.getMessage))
 
-  def openEnv(env: ZIO[Any, Throwable, Builder[ByteBuffer]], lmdbFile: File, flag: EnvFlags) = for {
+  def openEnv(env: ZIO[Any, Throwable, Builder[ByteBuffer]], lmdbFile: File, flag: EnvFlags): ZIO[Console, Throwable, Any]  = for {
     environment <- env
-    openedEnv <- IO.effect(environment.open(lmdbFile, flag)).catchAll(e => putStrLn("error in file " + e.getMessage))
+    openedEnv <- IO.effect(environment.open(lmdbFile, flag)).catchAll(e =>IO.succeed("error in file " + e.getMessage))
   } yield openedEnv
 
 
   def openDb(env: ZIO[Any, Throwable, Env[ByteBuffer]], lmdbName: String, flag: DbiFlags): ZIO[Console, Throwable, Any] = for {
     environment <- env
-    db <- IO.effect(environment.openDbi(lmdbName, flag)).catchAll(e => putStrLn(e.getMessage))
+    db <- IO.effect(environment.openDbi(lmdbName, flag)).catchAll(e => IO.succeed(e.getMessage))
   } yield db
 
   def createWriteTx(env: UIO[Env[ByteBuffer]]): ZIO[Console, Throwable, Any] = for {
     environment <- env
-    txnWrite <- IO.effect(environment.txnWrite()).catchAll(e => putStrLn(e.getMessage))
+    txnWrite <- IO.effect(environment.txnWrite()).catchAll(e => IO.succeed(e.getMessage))
   } yield txnWrite
 
   def putOnLmdb(tx: UIO[Txn[ByteBuffer]], db: UIO[Dbi[ByteBuffer]], key: ByteBuffer, value: ByteBuffer): ZIO[Console, Throwable, Any] = for {
